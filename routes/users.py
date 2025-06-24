@@ -41,7 +41,7 @@ async def signup(request: Register, db: Session = Depends(get_db)):
             code=500,
             status="INTERNAL SERVER ERROR",
             message="User registered failed"
-        ).dict(exclude_none=True)
+        ).model_dump(exclude_none=True)
 
 # login
 
